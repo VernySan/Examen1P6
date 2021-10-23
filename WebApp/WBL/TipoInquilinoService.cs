@@ -35,7 +35,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<TipoInquilinoEntity>("exp.TipoInquilinoObtener");
+                var result = sql.QueryAsync<TipoInquilinoEntity>("dbo.TipoInquilinoObtener");
 
                 return await result;
             }
@@ -53,7 +53,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryFirstAsync<TipoInquilinoEntity>("exp.TipoInquilinoObtener", new
+                var result = sql.QueryFirstAsync<TipoInquilinoEntity>("dbo.TipoInquilinoObtener", new
                 { entity.Id_TipoInquilino });
 
                 return await result;
@@ -72,7 +72,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync("exp.TipoInquilinoInsertar", new
+                var result = sql.ExecuteAsync("dbo.TipoInquilinoInsertar", new
                 {
                     entity.Descripcion,
                     entity.Estado
@@ -96,7 +96,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync("exp.TipoInquilinoActualizar", new
+                var result = sql.ExecuteAsync("dbo.TipoInquilinoActualizar", new
                 {
                     entity.Id_TipoInquilino,
                     entity.Descripcion,
@@ -120,7 +120,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync("exp.TipoInquilinoEliminar", new
+                var result = sql.ExecuteAsync("dbo.TipoInquilinoEliminar", new
                 {
                     entity.Id_TipoInquilino,
 
