@@ -27,9 +27,17 @@
                             <tr>
                                 <td>@item.Id_TipoInquilino</td>
                                 <td>@item.Descripcion</td>
-                                <td>@item.Estado</td>
                                 <td>
-                                    <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.Id_TipoInquilino"><i class='bx bx-edit-alt'></i></a>
+                                    @if (item.Estado.Equals("True")) {
+                                      <p>Activo</p>
+                                    } else { 
+                                      <p>Inactivo</p>
+                                    }
+                                 </td>
+                    
+                                <td>
+                    
+                                                        <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.Id_TipoInquilino"><i class='bx bx-edit-alt'></i></a>
 
                                     <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickEliminar(@item.Id_TipoInquilino)">
                                         <i class='bx bx-trash'></i>
