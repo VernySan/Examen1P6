@@ -58,8 +58,13 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\TipoInquilino.sql" />
+    <Build Include="dbo\Stored Procedures\TipoInquilinoInsertar.sql" />
+    <Build Include="dbo\Stored Procedures\TipoInquilinoActualizar.sql" />
+    <Build Include="dbo\Stored Procedures\TipoInquilinoEliminar.sql" />
+    <Build Include="dbo\Stored Procedures\TipoInquilinoObtener.sql" />
   </ItemGroup>
 </Project>
